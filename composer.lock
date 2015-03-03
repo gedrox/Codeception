@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a46352336256976f9f2971816431d4e0",
+    "hash": "19bbee3274212218f4a8226c9202a374",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -103,16 +103,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "5.2.0",
+            "version": "dev-gedrox",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa"
+                "url": "https://github.com/gedrox/guzzle.git",
+                "reference": "742899ac4895209e188e03e978f9200d632d7d2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/475b29ccd411f2fa8a408e64576418728c032cfa",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa",
+                "url": "https://api.github.com/repos/gedrox/guzzle/zipball/742899ac4895209e188e03e978f9200d632d7d2a",
+                "reference": "742899ac4895209e188e03e978f9200d632d7d2a",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +135,11 @@
                     "GuzzleHttp\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "GuzzleHttp\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -149,28 +153,31 @@
             "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
             "homepage": "http://guzzlephp.org/",
             "keywords": [
+                "HTTP client",
                 "client",
                 "curl",
                 "framework",
                 "http",
-                "http client",
                 "rest",
                 "web service"
             ],
-            "time": "2015-01-28 01:03:29"
+            "support": {
+                "source": "https://github.com/gedrox/guzzle/tree/gedrox"
+            },
+            "time": "2015-03-03 22:45:40"
         },
         {
             "name": "guzzlehttp/ringphp",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/RingPHP.git",
-                "reference": "a903f51b692427318bc813217c0e6505287e79a4"
+                "reference": "f43ab34aad69ca0ba04172cf2c3cd5c12fc0e5a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/a903f51b692427318bc813217c0e6505287e79a4",
-                "reference": "a903f51b692427318bc813217c0e6505287e79a4",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/f43ab34aad69ca0ba04172cf2c3cd5c12fc0e5a4",
+                "reference": "f43ab34aad69ca0ba04172cf2c3cd5c12fc0e5a4",
                 "shasum": ""
             },
             "require": {
@@ -207,7 +214,8 @@
                     "homepage": "https://github.com/mtdowling"
                 }
             ],
-            "time": "2014-12-11 05:50:32"
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-02-26 20:43:09"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1318,24 +1326,25 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v2.6.4",
+            "version": "dev-master",
             "target-dir": "Symfony/Component/DomCrawler",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/DomCrawler.git",
-                "reference": "26a9eb302decd828990e1015afaa11b78b016073"
+                "url": "https://github.com/gedrox/DomCrawler.git",
+                "reference": "629d8e223b7843b5d37c4884d55153ae2cc46be7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/26a9eb302decd828990e1015afaa11b78b016073",
-                "reference": "26a9eb302decd828990e1015afaa11b78b016073",
+                "url": "https://api.github.com/repos/gedrox/DomCrawler/zipball/629d8e223b7843b5d37c4884d55153ae2cc46be7",
+                "reference": "629d8e223b7843b5d37c4884d55153ae2cc46be7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.5.9"
             },
             "require-dev": {
-                "symfony/css-selector": "~2.3"
+                "symfony/css-selector": "~2.7|~3.0",
+                "symfony/phpunit-bridge": "~2.7|~3.0"
             },
             "suggest": {
                 "symfony/css-selector": ""
@@ -1343,7 +1352,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -1351,23 +1360,25 @@
                     "Symfony\\Component\\DomCrawler\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
                 }
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03 08:01:59"
+            "support": {
+                "source": "https://github.com/gedrox/DomCrawler/tree/master"
+            },
+            "time": "2015-03-03 22:55:45"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1565,12 +1576,12 @@
             "version": "v3.2.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/facebook/facebook-php-sdk.git",
+                "url": "https://github.com/facebookarchive/facebook-php-sdk.git",
                 "reference": "6714042fa2f5979d4c64c7d11fb4bcab16bdf6cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/facebook-php-sdk/zipball/6714042fa2f5979d4c64c7d11fb4bcab16bdf6cb",
+                "url": "https://api.github.com/repos/facebookarchive/facebook-php-sdk/zipball/6714042fa2f5979d4c64c7d11fb4bcab16bdf6cb",
                 "reference": "6714042fa2f5979d4c64c7d11fb4bcab16bdf6cb",
                 "shasum": ""
             },
@@ -1604,20 +1615,21 @@
                 "facebook",
                 "sdk"
             ],
+            "abandoned": "facebook/php-sdk-v4",
             "time": "2013-11-19 23:11:14"
         },
         {
             "name": "flow/jsonpath",
-            "version": "0.2.3",
+            "version": "0.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FlowCommunications/JSONPath.git",
-                "reference": "b45607d5004679b494926d05faaed923e02a691d"
+                "reference": "c0ca6a388ff3b1da784de059b948fa5874c26050"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FlowCommunications/JSONPath/zipball/b45607d5004679b494926d05faaed923e02a691d",
-                "reference": "b45607d5004679b494926d05faaed923e02a691d",
+                "url": "https://api.github.com/repos/FlowCommunications/JSONPath/zipball/c0ca6a388ff3b1da784de059b948fa5874c26050",
+                "reference": "c0ca6a388ff3b1da784de059b948fa5874c26050",
                 "shasum": ""
             },
             "require-dev": {
@@ -1642,7 +1654,7 @@
                 }
             ],
             "description": "JSONPath implementation for parsing, searching and flattening arrays",
-            "time": "2015-02-07 15:19:56"
+            "time": "2015-02-26 07:26:33"
         },
         {
             "name": "monolog/monolog",
@@ -1840,20 +1852,21 @@
         },
         {
             "name": "videlalvaro/php-amqplib",
-            "version": "v2.4.1",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/videlalvaro/php-amqplib.git",
-                "reference": "58044157b30853a1a425e26e9ff9895247668ac3"
+                "reference": "7989ddce7c4aa6038483d8999b12d3b1f7c81ff9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/58044157b30853a1a425e26e9ff9895247668ac3",
-                "reference": "58044157b30853a1a425e26e9ff9895247668ac3",
+                "url": "https://api.github.com/repos/videlalvaro/php-amqplib/zipball/7989ddce7c4aa6038483d8999b12d3b1f7c81ff9",
+                "reference": "7989ddce7c4aa6038483d8999b12d3b1f7c81ff9",
                 "shasum": ""
             },
             "require": {
                 "ext-bcmath": "*",
+                "ext-mbstring": "*",
                 "php": ">=5.3.0"
             },
             "require-dev": {
@@ -1889,12 +1902,22 @@
                 "queue",
                 "rabbitmq"
             ],
-            "time": "2014-10-06 11:00:55"
+            "time": "2015-02-18 18:16:04"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "2.7-dev",
+            "alias_normalized": "2.7.0.0-dev",
+            "version": "9999999-dev",
+            "package": "symfony/dom-crawler"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "guzzlehttp/guzzle": 20,
+        "symfony/dom-crawler": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
